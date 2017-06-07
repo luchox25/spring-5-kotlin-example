@@ -8,7 +8,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.baeldung.web.Foo;
+import com.baeldung.model.Foo;
 
 @Component
 public class DataSetupBean implements InitializingBean {
@@ -20,7 +20,7 @@ public class DataSetupBean implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        IntStream.range(1, 20).forEach(i -> repo.save(new Foo(randomAlphabetic(8))));
+        IntStream.range(1, 5).forEach(i -> repo.save(new Foo(randomAlphabetic(8))));
     }
 
 }

@@ -1,4 +1,4 @@
-package com.baeldung.web;
+package com.baeldung.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ public class Foo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -33,16 +33,16 @@ public class Foo {
 
     // API
 
-    public long getId() {
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(final long id) {
+    public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(final String name) {
